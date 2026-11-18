@@ -1,0 +1,18 @@
+name: Shift-Right Monitoring
+
+on:
+  workflow_dispatch:
+
+jobs:
+  monitoring:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Monitoring aplikasi
+        run: echo "Monitoring aplikasi setelah deployment"
+
+      - name: Cek kondisi aplikasi
+        run: echo "Aplikasi berjalan normal"
+
+      - name: Feedback
+        run: echo "Hasil monitoring menjadi feedback untuk perbaikan"
