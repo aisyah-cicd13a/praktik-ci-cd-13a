@@ -14,9 +14,10 @@ jobs:
       - name: Checkout kode
         uses: actions/checkout@v4
 
-      - name: Menjalankan Continuous Testing
-        run: |
-          echo "=== Continuous Testing ==="
-          echo "Kode berhasil diperiksa."
-          echo "Testing berjalan otomatis."
-          echo "CI/CD pipeline berhasil dijalankan."
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Jalankan testing
+        run: node test.js
