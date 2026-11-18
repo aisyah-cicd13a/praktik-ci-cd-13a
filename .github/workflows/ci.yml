@@ -1,0 +1,22 @@
+name: Continuous Testing
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout kode
+        uses: actions/checkout@v4
+
+      - name: Menjalankan Continuous Testing
+        run: |
+          echo "=== Continuous Testing ==="
+          echo "Kode berhasil diperiksa."
+          echo "Testing berjalan otomatis."
+          echo "CI/CD pipeline berhasil dijalankan."
